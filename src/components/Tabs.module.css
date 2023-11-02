@@ -1,0 +1,30 @@
+.tabs { 
+    padding-top: 30px;
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.tabs ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tabs ul a {
+    width: 33.33%;
+    text-align: center;
+    line-height: 40px;
+}
+
+.tabs ul a.active::after {
+    position: absolute;
+    content: '';
+
+    top: 97%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90px;
+    height: 4px;
+    background-color: #2F80ED;
+    border-radius: 4px 4px 0 0;
+}

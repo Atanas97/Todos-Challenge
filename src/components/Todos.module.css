@@ -1,0 +1,48 @@
+.todos label{
+    display: flex;
+    align-items: center;
+}
+
+.todos .checkbox {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid #828282;
+    margin-right: 7px;
+}
+
+.todos input[type="checkbox"]:checked ~ .checkbox {
+    background-color: #2F80ED;
+    border-color: #2F80ED;
+
+}
+
+.todos input[type="checkbox"]:checked ~ .checkbox::before,
+.todos input[type="checkbox"]:checked ~ .checkbox::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.todos input[type="checkbox"]:checked ~ .checkbox::before {
+    top: 11px;
+    left: 14px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 15px;
+    height: 3px;
+}
+
+.todos input[type="checkbox"]:checked ~ .checkbox::after {
+    width: 9px;
+    height: 3px;
+    top: 13px;
+    left: 7px;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.todos input[type="checkbox"] {
+    display: none;
+}
